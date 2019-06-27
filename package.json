@@ -14,13 +14,23 @@
     "bugs": {
         "url": "https://github.com/uconn/banner/issues"
     },
-    "scripts": {},
-    "contributors": [{
+    "scripts": {
+        "cypress:open": "cypress open"
+    },
+    "contributors": [
+        {
             "name": "Brian Daley"
         },
         {
             "name": "Brian Kelleher"
         }
     ],
-    "directories": {}
+    "directories": {},
+    "dependencies": {
+        "cypress": "^3.3.1"
+    },
+    "devDependencies": {
+        "axe-core": "^3.2.2",
+        "cypress-axe": "^0.5.1"
+    }
 }
