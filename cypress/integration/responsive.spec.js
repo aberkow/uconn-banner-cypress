@@ -1,6 +1,11 @@
 const config  = require('../config')
 
 describe('responsive design tests', () => {
+
+  before(() => {
+    cy.exec('npm run clean:screenshots')
+  })
+
   beforeEach(() => cy.visit(`${config.url}:${config.port}`))
 
   afterEach(() => {

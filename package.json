@@ -15,6 +15,7 @@
         "url": "https://github.com/uconn/banner/issues"
     },
     "scripts": {
+        "clean:screenshots": " rm -rf cypress/screenshots/*",
         "cypress:open": "cypress open"
     },
     "contributors": [
