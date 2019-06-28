@@ -19,8 +19,8 @@ describe('accessibility check', () => {
       })      
   })
 
-  it('have no visible text, but have visible icons', () => {
-    cy.get(`${config.bannerSelector .btn}`)
+  it('has no visible text, but has visible icons', () => {
+    cy.get(`${config.bannerSelector} .btn`)
       .each(el => {
         cy.get(el)
           .within(() => {
@@ -29,6 +29,4 @@ describe('accessibility check', () => {
           })
       })
   })
-
-
 })
