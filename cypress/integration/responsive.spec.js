@@ -3,6 +3,12 @@ const config  = require('../config')
 describe('responsive design tests', () => {
   beforeEach(() => cy.visit(`${config.url}:${config.port}`))
 
+  afterEach(() => {
+    // take a screenshot of the responsive design with a little context.
+    cy.get('#uconn-banner')
+      .screenshot()
+  })
+
   context('laptop resolution', () => {
     beforeEach(() => cy.viewport('macbook-11'))
 
@@ -13,7 +19,6 @@ describe('responsive design tests', () => {
             .contains('University of Connecticut')
             .should('be.visible')
         })
-  
     })
   })
 
