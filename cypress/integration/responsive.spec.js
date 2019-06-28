@@ -17,7 +17,7 @@ describe('responsive design tests', () => {
   context('laptop resolution', () => {
     beforeEach(() => cy.viewport('macbook-11'))
 
-    it('has a responsive design & University of Connecticut is visible', () => {
+    it('desktop design & University of Connecticut is visible', () => {
       cy.get(config.bannerSelector)
         .within(() => {
           cy.get('#university-of-connecticut')
@@ -30,7 +30,7 @@ describe('responsive design tests', () => {
   context('tablet resolution', () => {
     beforeEach(() => cy.viewport('ipad-2'))
 
-    it('has a responsive design & University of Connecticut is not visible', () => {
+    it('tablet design & University of Connecticut is not visible', () => {
       cy.get(config.bannerSelector)
         .within(() => {
           cy.get('#university-of-connecticut')
@@ -44,7 +44,7 @@ describe('responsive design tests', () => {
   context('mobile resolution', () => {
     beforeEach(() => cy.viewport('iphone-5'))
 
-    it('has a responsive design & University of Connecticut is not visible', () => {
+    it('mobile design & University of Connecticut is not visible', () => {
       cy.get(config.bannerSelector)
         .within(() => {
           cy.get('#university-of-connecticut')
